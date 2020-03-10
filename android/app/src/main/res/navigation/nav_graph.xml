@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.wkdrabbit.chickentinder.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/action_mainFragment_to_SwipeHolderFragment"
+            app:destination="@id/swipeHolderFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/swipeFragment"
+        android:name="com.wkdrabbit.chickentinder.SwipeFragment"
+        android:label="fragment_swipe"
+        tools:layout="@layout/fragment_swipe">
+    </fragment>
+
+    <fragment
+        android:id="@+id/swipeHolderFragment"
+        android:name="com.wkdrabbit.chickentinder.SwipeFragment"
+        android:label="fragment_swipe_holder"
+        tools:layout="@layout/fragment_swipe_holder">
+    </fragment>
+
+</navigation>
